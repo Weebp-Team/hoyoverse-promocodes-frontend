@@ -1,0 +1,36 @@
+.sideBarMenu {
+    background-color: var(--main-background-sidebarMenu-color);
+    height: 100%;
+    width: 100%;
+}
+
+.sideBarMenuContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: inherit;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-text-color);
+    margin-bottom: 10px;
+}
+
+.title p {
+    font-size: 30px;
+    font-family: Catamaran, sans-serif;
+    font-weight: bold;
+}
+
+.gameListContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.account {
+
+}

@@ -1,0 +1,12 @@
+.sideBarMenuItem{
+    margin-bottom: 10px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+}
+
+.title {
+    color: var(--main-text-color);
+    font-size: 15px;
+    font-weight: 600;
+}

@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Catamaran';
+    src: url(../public/assets/fonts/Catamaran/Catamaran-Thin.ttf);
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Catamaran';
+    src: url(../public/assets/fonts/Catamaran/Catamaran-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Poppins-regular';
+    src: url(../public/assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../public/assets/fonts/Poppins/Poppins-SemiBold.ttf);
+    font-weight: 600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins-regular, serif;
+}
+
+:root {
+    --main-background-sidebarMenu-color: #202442;
+    --main-text-color: #ffffff;
+    --main-button-color: #4266D0;
+}
+
+html, body, #root {
+    height: 100vh;
+    width: 100vw;
+}
