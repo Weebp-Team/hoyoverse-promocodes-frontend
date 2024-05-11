@@ -13,7 +13,7 @@ const data = [
     },
     {
         id: 2,
-        title: 'Dota 2',
+        title: 'Dota 2: для пидоров',
     },
 ];
 
