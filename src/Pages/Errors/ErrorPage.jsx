@@ -4,7 +4,7 @@ import style from './ErrorPage.module.css';
 
 const ErrorPage = () => {
     const error = useRouteError();
-    console.error(error);
+    console.log(error);
 
     return (
         <div className={style.errorPage}>

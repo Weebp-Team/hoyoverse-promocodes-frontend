@@ -8,24 +8,39 @@ const App = () => {
 
     const [gameData, setGameData] = useState([]);
 
+    const [promocodeData, setPromocodeData] = useState({
+        result: [],
+    });
+
     useEffect(() => {
-        const fetchData = async () => {
-            const response = await fetch(
-                'https://api.hoyopromo.ru/api/v1/game/'
-            );
-
-            if (response.ok) {
-                const dataJson = await response.json();
-                setGameData(dataJson);
-            } else {
-                alert(
-                    `Ошибка запроса, ответ пришел со статусом: ${response.status}`
-                );
-            }
-        };
-
-        fetchData();
+        Promise.all([
+            fetch('https://api.hoyopromo.ru/api/v1/game/', {
+                method: 'GET',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                },
+            }),
+            fetch('https://api.hoyopromo.ru/api/v1/promocode/', {
+                method: 'GET',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                },
+            }),
+        ])
+            .then(([resultGame, resultPromocode]) =>
+                Promise.all([resultGame.json(), resultPromocode.json()])
+            )
+            .then(([dataGame, dataPromocode]) => {
+                setGameData(dataGame);
+                setPromocodeData(dataPromocode);
+            })
+            .catch((error) => console.log(error.message));
+        console.log(promocodeData);
+        // eslint-disable-next-line
     }, []);
+
     return (
         <div className={style.appContainer}>
             <div className={style.menu}>
@@ -36,7 +51,7 @@ const App = () => {
                 />
             </div>
             <div className={style.content}>
-                <PromocodeList />
+                <PromocodeList data={promocodeData} />
             </div>
         </div>
     );

@@ -6,11 +6,11 @@
 }
 
 .box {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: auto;
     gap: 10px;
     background-color: #2D325A;
-    height: 100%;
     width: 100%;
     border-radius: 10px;
     padding: 10px;

@@ -1,18 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import style from './PromocodeListItem.module.css';
 
-const data = {
-    id: 18,
-    status: 'unchecked',
-    dateCreated: '2024-05-11T22:28:23.136424',
-    dateInvalidity: null,
-    promocode: 'test',
-    game: {
-        id: 1,
-        name: 'Genshin Impact',
-    },
-};
-const PromocodeListItem = () => {
+const PromocodeListItem = ({ data }) => {
     return (
         <div className={style.promocodeItem}>
             <div className={style.info}>
@@ -27,8 +17,8 @@ const PromocodeListItem = () => {
             </div>
             <div className={style.copyIcon}>
                 <img
-                    width="36"
-                    height="36"
+                    width="24"
+                    height="24"
                     src="./assets/images/copy_icon.svg"
                     alt="copy"
                 />
@@ -37,4 +27,7 @@ const PromocodeListItem = () => {
     );
 };
 
+PromocodeListItem.propTypes = {
+    data: PropTypes.objectOf().isRequired,
+};
 export default PromocodeListItem;

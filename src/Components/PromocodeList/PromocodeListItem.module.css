@@ -1,10 +1,11 @@
 .promocodeItem {
+    flex: 1;
     display: flex;
     justify-content: space-between;
+    width: 100%;
     gap: 40px;
     color: var(--main-text-color);
     background-color: #4266d0;
-    width: max-content;
     padding: 10px;
     border-radius: 10px;
 }
@@ -22,7 +23,6 @@
 
 .additionalInfo {
     display: flex;
-    flex-direction: column;
     gap: 5px;
     font-size: 13px;
 }

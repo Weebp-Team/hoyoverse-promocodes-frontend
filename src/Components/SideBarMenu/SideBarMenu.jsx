@@ -5,7 +5,6 @@ import SideBarMenuItem from './SideBarMenuItem';
 import AuthorizationButton from './AuthorizationButton';
 
 const SideBarMenu = ({ data, activeItemId, setActiveItemId }) => {
-    console.log(data);
     return (
         <div className={style.sideBarMenu}>
             <div className={style.sideBarMenuContainer}>
