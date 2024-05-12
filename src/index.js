@@ -5,6 +5,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ErrorPage from './Pages/Errors/ErrorPage';
+import VkAuthorizationPage from './Pages/VkAuthorizationPage';
 
 const router = createBrowserRouter([
     {
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
     },
     {
         path: '/vk',
-        element: <div>Vk authorization</div>,
+        element: <VkAuthorizationPage />,
     },
 ]);
 

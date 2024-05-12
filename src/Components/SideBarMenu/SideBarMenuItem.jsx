@@ -11,7 +11,7 @@ const SideBarMenuItem = ({ data, isActive, onClickHandler }) => {
                 onClickHandler(data.id);
             }}
             style={{ backgroundColor: isActive ? '#4266D0' : 'transparent' }}>
-            <p className={style.title}>{data.title}</p>
+            <p className={style.title}>{data.name}</p>
         </button>
     );
 };
