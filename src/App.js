@@ -11,10 +11,6 @@ const data = [
         id: 1,
         title: 'Honkai: Star Rail',
     },
-    {
-        id: 2,
-        title: 'Dota 2: для пидоров',
-    },
 ];
 
 const App = () => {
