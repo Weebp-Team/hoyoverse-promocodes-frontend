@@ -31,6 +31,8 @@
     flex-direction: column;
 }
 
-.account {
-
+.authorizationContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
