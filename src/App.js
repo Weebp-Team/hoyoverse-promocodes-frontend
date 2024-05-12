@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import style from './App.module.css';
 import SideBarMenu from './Components/SideBarMenu/SideBarMenu';
+import PromocodeList from './Components/PromocodeList/PromocodeList';
 
 const App = () => {
     const [activeItemId, setActiveItemId] = useState(1);
@@ -34,7 +35,9 @@ const App = () => {
                     setActiveItemId={setActiveItemId}
                 />
             </div>
-            <div className={style.content} />
+            <div className={style.content}>
+                <PromocodeList />
+            </div>
         </div>
     );
 };
