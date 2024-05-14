@@ -36,7 +36,10 @@ const App = () => {
     const deleteCookie = () => {
         const cookie = Cookie.parse(document.cookie);
 
-        return cookie;
+        // eslint-disable-next-line guard-for-in,no-restricted-syntax
+        for (const item in cookie) {
+            document.cookie = Cookie.serialize(item, '', { maxAge: -1 });
+        }
     };
 
     return (
@@ -46,7 +49,7 @@ const App = () => {
                 onClick={() => {
                     console.log(document.cookie);
                     console.log('-------------');
-                    console.log(deleteCookie());
+                    deleteCookie();
                     console.log(document.cookie);
                 }}>
                 click
