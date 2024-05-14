@@ -39,7 +39,7 @@ const App = () => {
         const keys = Object.keys(cookie);
 
         for (let i = 0; i < keys.length; i++) {
-            document.cookie = `${keys[i]}="";expires=Thu, 01 Jan 1970 00:00:00 GMT;max-age=-1`;
+            document.cookie = `${keys[i]}=;path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT;max-age=-1`;
             console.log('-');
         }
     };
