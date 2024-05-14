@@ -14,7 +14,7 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
     },
     {
-        path: '/vk',
+        path: '/vk:code',
         element: <VkAuthorizationPage />,
     },
 ]);
