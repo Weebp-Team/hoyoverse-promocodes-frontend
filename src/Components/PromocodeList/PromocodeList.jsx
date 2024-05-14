@@ -6,7 +6,7 @@ import PromocodeListItem from './PromocodeListItem';
 const PromocodeList = ({ data }) => {
     return (
         <div className={style.container}>
-            {!data.result && (
+            {data.result && (
                 <div className={style.box}>
                     {data.result.map((item) => {
                         return (
