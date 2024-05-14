@@ -25,19 +25,20 @@ const App = () => {
                 setPromocodeData(dataPromocode);
             })
             .catch((error) => console.log(error.message));
-        console.log(promocodeData);
         // eslint-disable-next-line
     }, []);
 
     const filterPromocodesByGame = (filterValue, arrayData) => {
-        const arr = arrayData.filter((item) => item.game.id === filterValue);
-        console.log(arr);
-
-        return arr;
+        return arrayData.filter((item) => item.game.id === filterValue);
     };
 
     return (
         <div className={style.appContainer}>
+            <button
+                type="button"
+                onClick={() => console.log(document.cookie)}>
+                click
+            </button>
             <div className={style.menu}>
                 <SideBarMenu
                     data={gameData}
