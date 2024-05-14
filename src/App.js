@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Cookie from 'cookie';
 import style from './App.module.css';
 import SideBarMenu from './Components/SideBarMenu/SideBarMenu';
 import PromocodeList from './Components/PromocodeList/PromocodeList';
@@ -32,11 +33,22 @@ const App = () => {
         return arrayData.filter((item) => item.game.id === filterValue);
     };
 
+    const deleteCookie = () => {
+        const cookie = Cookie.parse(document.cookie);
+
+        return cookie;
+    };
+
     return (
         <div className={style.appContainer}>
             <button
                 type="button"
-                onClick={() => console.log(document.cookie)}>
+                onClick={() => {
+                    console.log(document.cookie);
+                    console.log('-------------');
+                    console.log(deleteCookie());
+                    console.log(document.cookie);
+                }}>
                 click
             </button>
             <div className={style.menu}>
