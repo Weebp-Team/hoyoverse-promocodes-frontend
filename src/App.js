@@ -36,9 +36,12 @@ const App = () => {
     const deleteCookie = () => {
         const cookie = Cookie.parse(document.cookie);
 
-        // eslint-disable-next-line guard-for-in,no-restricted-syntax
-        for (const item in cookie) {
-            document.cookie = Cookie.serialize(item, '', { maxAge: -1 });
+        const keys = Object.keys(cookie);
+        const value = Object.values(cookie);
+
+        for (let i = 0; i < keys.length; i++) {
+            document.cookie = `${keys[i]}=${value[i]};expires=Thu, 01 Jan 1970 00:00:00 GMT`;
+            console.log('-');
         }
     };
 
