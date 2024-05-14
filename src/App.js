@@ -29,6 +29,13 @@ const App = () => {
         // eslint-disable-next-line
     }, []);
 
+    const filterPromocodesByGame = (filterValue, arrayData) => {
+        const arr = arrayData.filter((item) => item.game.id === filterValue);
+        console.log(arr);
+
+        return arr;
+    };
+
     return (
         <div className={style.appContainer}>
             <div className={style.menu}>
@@ -39,7 +46,13 @@ const App = () => {
                 />
             </div>
             <div className={style.content}>
-                <PromocodeList data={promocodeData} />
+                <PromocodeList
+                    data={filterPromocodesByGame(
+                        activeItemId,
+                        promocodeData.result
+                    )}
+                    activeItemId={activeItemId}
+                />
             </div>
         </div>
     );

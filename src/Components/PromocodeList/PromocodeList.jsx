@@ -6,9 +6,12 @@ import PromocodeListItem from './PromocodeListItem';
 const PromocodeList = ({ data }) => {
     return (
         <div className={style.container}>
-            {data.result && (
+            <div className={style.countGames}>
+                <p>Count of promo codes: {data.length}</p>
+            </div>
+            {data.length !== 0 && (
                 <div className={style.box}>
-                    {data.result.map((item) => {
+                    {data.map((item) => {
                         return (
                             <PromocodeListItem
                                 key={item.id}
@@ -23,7 +26,7 @@ const PromocodeList = ({ data }) => {
 };
 
 PromocodeList.propTypes = {
-    data: PropTypes.objectOf().isRequired,
+    data: PropTypes.arrayOf().isRequired,
 };
 
 export default PromocodeList;

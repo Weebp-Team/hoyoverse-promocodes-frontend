@@ -17,3 +17,13 @@
     overflow: auto;
 }
 
+.countGames {
+    margin-bottom: 10px;
+}
+
+.countGames p{
+    color: var(--main-text-color);
+    font-family: Poppins, sans-serif;
+}
+
+
