@@ -14,20 +14,8 @@ const App = () => {
 
     useEffect(() => {
         Promise.all([
-            fetch('https://api.hoyopromo.ru/api/v1/game/', {
-                method: 'GET',
-                headers: {
-                    Accept: 'application/json',
-                    'Content-Type': 'application/json',
-                },
-            }),
-            fetch('https://api.hoyopromo.ru/api/v1/promocode/', {
-                method: 'GET',
-                headers: {
-                    Accept: 'application/json',
-                    'Content-Type': 'application/json',
-                },
-            }),
+            fetch('https://api.hoyopromo.ru/api/v1/game/'),
+            fetch('https://api.hoyopromo.ru/api/v1/promocode/'),
         ])
             .then(([resultGame, resultPromocode]) =>
                 Promise.all([resultGame.json(), resultPromocode.json()])
