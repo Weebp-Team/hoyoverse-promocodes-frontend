@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import 'react-notifications/lib/notifications.css';
+import { NotificationContainer, NotificationManager } from 'react-notifications';
 import style from './PromocodeListItem.module.css';
 
 const PromocodeListItem = ({ data }) => {
@@ -15,14 +17,22 @@ const PromocodeListItem = ({ data }) => {
                     <p>status: {data.status}</p>
                 </div>
             </div>
-            <div className={style.copyIcon}>
+            <button
+                type="button"
+                className={style.copyIcon}
+                onClick={() => {
+                    NotificationManager.success('Промокод скопирован!');
+                    navigator.clipboard.writeText(data.promocode);
+                }}
+            >
                 <img
                     width="24"
                     height="24"
                     src="./assets/images/copy_icon.svg"
                     alt="copy"
                 />
-            </div>
+            </button>
+            <NotificationContainer/>
         </div>
     );
 };

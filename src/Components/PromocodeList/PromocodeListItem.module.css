@@ -8,6 +8,7 @@
     background-color: #4266d0;
     padding: 10px;
     border-radius: 10px;
+    transition: all .4s;
 }
 
 .info {
@@ -31,4 +32,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all .4s;
+    background-color: transparent;
+    border: none;
+}
+
+.copyIcon:hover {
+    transform: scale(1.1);
 }

@@ -39,3 +39,12 @@ html, body, #root {
     width: 100vw;
     overflow: hidden;
 }
+
+.notification {
+    box-shadow: none !important;
+    font-weight: bold !important;
+}
+
+.notification-message {
+    font-family: Catamaran, sans-serif !important;
+}
