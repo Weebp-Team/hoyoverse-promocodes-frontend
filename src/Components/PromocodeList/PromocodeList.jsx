@@ -7,7 +7,7 @@ const PromocodeList = ({ data }) => {
     return (
         <div className={style.container}>
             <div className={style.countGames}>
-                <p>Count of promo codes: {data.length}</p>
+                <p>Количество промокодов: {data.length}</p>
             </div>
             {data.length !== 0 && (
                 <div className={style.box}>
