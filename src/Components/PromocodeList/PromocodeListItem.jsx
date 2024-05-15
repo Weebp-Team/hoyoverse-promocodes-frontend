@@ -21,7 +21,7 @@ const PromocodeListItem = ({ data }) => {
                 type="button"
                 className={style.copyIcon}
                 onClick={() => {
-                    NotificationManager.success('Промокод скопирован!', 'Успех', 30000);
+                    NotificationManager.success('Промокод скопирован!');
                     navigator.clipboard.writeText(data.promocode);
                 }}
             >
