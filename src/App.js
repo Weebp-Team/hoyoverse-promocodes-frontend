@@ -8,6 +8,8 @@ const App = () => {
 
     const [gameData, setGameData] = useState([]);
 
+    const [userData, setUserData] = useState({});
+
     const [promocodeData, setPromocodeData] = useState({
         result: [],
     });
@@ -16,13 +18,15 @@ const App = () => {
         Promise.all([
             fetch('https://api.hoyopromo.ru/api/v1/game/'),
             fetch('https://api.hoyopromo.ru/api/v1/promocode/'),
+            fetch('https://api.hoyopromo.ru/api/v1/user/'),
         ])
-            .then(([resultGame, resultPromocode]) =>
-                Promise.all([resultGame.json(), resultPromocode.json()])
+            .then(([resultGame, resultPromocode, resultUser]) =>
+                Promise.all([resultGame.json(), resultPromocode.json(), resultUser.json()])
             )
-            .then(([dataGame, dataPromocode]) => {
+            .then(([dataGame, dataPromocode, dataUser]) => {
                 setGameData(dataGame);
                 setPromocodeData(dataPromocode);
+                setUserData(dataUser);
             })
             .catch((error) => console.log(error.message));
         // eslint-disable-next-line
@@ -37,6 +41,7 @@ const App = () => {
             <div className={style.menu}>
                 <SideBarMenu
                     data={gameData}
+                    userData={userData}
                     activeItemId={activeItemId}
                     setActiveItemId={setActiveItemId}
                 />

@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import style from './SideBarMenu.module.css';
 import SideBarMenuItem from './SideBarMenuItem';
 import AuthorizationButton from './AuthorizationButton';
+import LogoutButton from './LogoutButton';
+import UserInfo from './UserInfo';
 
-const SideBarMenu = ({ data, activeItemId, setActiveItemId }) => {
+const SideBarMenu = ({ data, userData, activeItemId, setActiveItemId }) => {
     return (
         <div className={style.sideBarMenu}>
             <div className={style.sideBarMenuContainer}>
@@ -22,16 +24,30 @@ const SideBarMenu = ({ data, activeItemId, setActiveItemId }) => {
                         );
                     })}
                 </div>
-                <div className={style.authorizationContainer}>
-                    <AuthorizationButton />
-                </div>
+                {userData.length > 0 ? (
+                    <div className={style.userContainer}>
+                        <UserInfo 
+                            data={userData}
+                        />
+                        <LogoutButton />
+                    </div>
+                ) : (
+                    <div className={style.authorizationContainer}>
+                        <AuthorizationButton />
+                    </div>
+                )}
             </div>
         </div>
     );
 };
 
+SideBarMenu.defaultProps = {
+    userData: {}
+}
+
 SideBarMenu.propTypes = {
     data: PropTypes.arrayOf(PropTypes.object).isRequired,
+    userData: PropTypes.objectOf(PropTypes.object),
     activeItemId: PropTypes.number.isRequired,
     setActiveItemId: PropTypes.func.isRequired,
 };
