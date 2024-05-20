@@ -1,19 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.84c69567.css",
-    "main.js": "/static/js/main.ca3ba23b.js",
+    "main.css": "/static/css/main.6eb8ba69.css",
+    "main.js": "/static/js/main.b56f2402.js",
     "static/js/453.9a994576.chunk.js": "/static/js/453.9a994576.chunk.js",
     "static/media/Poppins-Regular.ttf": "/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
     "static/media/Poppins-SemiBold.ttf": "/static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf",
     "static/media/Catamaran-Thin.ttf": "/static/media/Catamaran-Thin.dd804d14f5370da25f7c.ttf",
     "static/media/Catamaran-Bold.ttf": "/static/media/Catamaran-Bold.33c8087df96a1b9364e8.ttf",
+    "static/media/notification.svg?s3g3t9": "/static/media/notification.5d0158671dd860c714c4.svg",
+    "static/media/notification.eot": "/static/media/notification.3657084dc0419605a91c.eot",
+    "static/media/notification.woff?s3g3t9": "/static/media/notification.c392cd33d9d9de730f9d.woff",
+    "static/media/notification.ttf?s3g3t9": "/static/media/notification.c5d9251ea82e42f75381.ttf",
     "index.html": "/index.html",
-    "main.84c69567.css.map": "/static/css/main.84c69567.css.map",
-    "main.ca3ba23b.js.map": "/static/js/main.ca3ba23b.js.map",
+    "main.6eb8ba69.css.map": "/static/css/main.6eb8ba69.css.map",
+    "main.b56f2402.js.map": "/static/js/main.b56f2402.js.map",
     "453.9a994576.chunk.js.map": "/static/js/453.9a994576.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.84c69567.css",
-    "static/js/main.ca3ba23b.js"
+    "static/css/main.6eb8ba69.css",
+    "static/js/main.b56f2402.js"
   ]
 }
